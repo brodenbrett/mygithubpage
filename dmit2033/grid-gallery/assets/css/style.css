@@ -110,7 +110,7 @@ header .site-tagline .dribbble {
     max-width: 30.333%;
     margin: 0 1%; }
 
-    .text{display: inline;}
+  nav .site-brand .text{display: inline;}
 
   header{min-height: 500px;}
 
