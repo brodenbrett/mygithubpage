@@ -110,6 +110,8 @@ header .site-tagline .dribbble {
     max-width: 30.333%;
     margin: 0 1%; }
 
+    .text{display: inline;}
+
   header{min-height: 500px;}
 
   .content ul{max-width: 960px;
