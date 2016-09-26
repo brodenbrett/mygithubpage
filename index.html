@@ -1,26 +1,51 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- sets the language of the page ("this page is written in _____: would you like to translate?") -->
+<html lang="en">
 <head>
-	<title>My Site</title> <!-- title of the webpage -->
+	<title>My Site</title>
 	<meta charset="utf-8" >
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- sets the chrome engine for all the X-UA Compatible types -->
-	<meta name="author" content="Broden Brett"> <!-- your name in case someone who doesn't understand code steals it -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="Broden Brett">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="stylesheets/reset.css">
 	<link rel="stylesheet" href="stylesheets/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-
 </head>
 
 <body>
-	<header>
-		<h1>Header</h1>
-		<form class="clearfix">
-			<input type="button" value="Go Back" onclick="history.back(-1)" />
-			<input type="button" value="Button Two" onclick="history.back(-1)" />
-		<form>
+	<header class="clearfix">
+		<h1><a href="index.html">Header</a></h1>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Clients</a></li>
+				<li><a href="#">Contact</a></li>
+				<li class="icon"><a href="javascript:void(0);" onclick="toggleNav()">&#9776;</a></li>
+			</ul>
+		</nav>
+
+		<section>
+			<h2>Header Two</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi aliquid deleniti, excepturi dolorem nam impedit iusto saepe aut eum dolor aspernatur natus maiores ducimus, nesciunt odio suscipit nisi facilis earum?</p>
+		</section>
 	</header>
 
 	<main class="clearfix">
+		<aside class="side-nav">
+			<ul>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Clients</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+
+			<section>
+				<h2>Header Two</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi aliquid deleniti, excepturi dolorem nam impedit iusto saepe aut eum dolor aspernatur natus maiores ducimus, nesciunt odio suscipit nisi facilis earum?</p>
+			</section>
+		</aside>
+
 		<section>
 			<h2>Section One</h2>
 			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
@@ -28,23 +53,28 @@
 
 		<section>
 			<h2>Section Two</h2>
-			<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 		</section>
 
 		<section>
 			<h2>Section Three</h2>
-			<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 		</section>
 
 		<section>
 			<h2>Section Four</h2>
-			<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+		</section>
+
+		<section>
+			<h2>Section Five</h2>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 		</section>
 	 </main>
 
 	<footer>
 		<p>&copy; | Footer | Broden Brett</p>
 	</footer>
-
+	<script src="javascript/main.js"></script>
 </body>
 </html>
