@@ -52,12 +52,12 @@ h1{
 	display: inline-block;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 865px) {
 	body{width: 300px;
 		margin: auto; }
 }
 
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 865px) {
 
 	.rwd-table tr{text-align: center;}
 
