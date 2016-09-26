@@ -1,20 +1,21 @@
 /* 12 14 16 21 24 36 48 60 72 */
 
 body{font: 16px/24px arial;
-	color: #222;
 	transition: 0.5s; }
+
+header, footer{background-color: #222;
+	color: #aaa;
+	padding: 24px 0;
+	font: 21px/24px 'Raleway'; }
 
 main {width: 960px;
 	margin: 0 auto;
+	padding: 24px 0;
 	background-image: linear-gradient(#ddd 1px, transparent 1px); 
-	background-size: auto 24px; }
+	background-size: auto 24px;
+	color: #222; }
 
-header, footer{background-color: #222;
-	color: white; }
-
-header{padding: 24px 0;
-	font: 21px/24px 'Raleway'; }
-
+/* Navigation */
 h1{font: bold 48px/48px 'Raleway'; 
 	text-transform: uppercase;
 	float: left;
@@ -23,19 +24,16 @@ h1{font: bold 48px/48px 'Raleway';
 
 header nav{float: left;
 	padding-right: 5%;
-	width: 73%; }
+	width: 73%;
+	text-align: right;
+	margin-top: 24px; }
 
-header nav ul{text-align: right;
-	margin-top: 24px;}
-
-header a{color: #aaa;
-	transition: 0.3s;}
-
-header li{display: inline-block;
+header li{display: inline;
 	padding: 0 5px;
 	text-transform: uppercase; }
 
-header a:hover{color: #fff; }
+header a{transition: 0.3s; }
+header a:hover, .side-nav li:hover{color: #fff; }
 
 header li.icon{display: none; 
 	transition: 0.3s;
@@ -44,102 +42,95 @@ header li.icon{display: none;
 	right: 5%; top: 36px; }
 
 .icon.rotate {-webkit-transform: rotate(-90deg);
-			-moz-transform: rotate(-90deg);
-			 -ms-transform: rotate(-90deg);
-			  -o-transform: rotate(-90deg);
-	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); }
+				 -moz-transform: rotate(-90deg);
+				  -ms-transform: rotate(-90deg);
+				   -o-transform: rotate(-90deg);
+					  transform: rotate(-90deg); }
 
+/* Textbox */
 header section{float: left; 
+	margin: 24px 0;
 	width: 100%;
-	margin-bottom: 24px;}
+	color: #666; }
 
 header section h2{width: 940px;
-	margin: 24px auto 0 auto;
-	text-transform: uppercase;
-	font: bold 21px/24px 'Raleway'; }
+	margin: auto;
+	text-transform: uppercase; }
 
 header section p{width: 920px;
 	font: italic 16px/24px 'Raleway';
 	margin: 12px auto; }
 
-main{padding: 24px 0;}
 
-aside.side-nav{height: 100%;
-	width: 0;
-	position: fixed;
-	z-index: 1;
+/* Mobile Nav */
+.side-nav{position: fixed;
 	top: 0; left: 0;
+	width: 0; height: 100%;
 	background-color: #111;
 	overflow-x: hidden;
 	transition: 0.5s;
-}
+	z-index: 1; }
 
-aside.side-nav ul{padding: 24px 0;
-	max-height: 190px;}
+.side-nav ul{padding: 24px 0;
+	max-height: 190px; }
 
-aside.side-nav li{
-	display: block;
+.side-nav li{display: block;
+	text-transform: uppercase;
 	text-align: center;
 	transition: 0.3s;
 	width: 200px;
 	color: #aaa;
 	padding: 12px 0;
-	font: 21px/24px 'Raleway';
-	text-transform: uppercase;
-}
+	font: 21px/24px 'Raleway'; }
 
-aside.side-nav li:hover{
-	background-color: #333;
-	color: #fff;
-	padding: 24px 0;
-}
+.side-nav li:hover{background-color: #333;
+	padding: 24px 0; }
 
-main aside.side-nav section:last-child{margin-top: 24px;
-	float: none;
-	padding: 0 10px;
+main .side-nav section{margin: 24px 10px;
+	font: 12px/24px 'Raleway';
 	width: 180px;
-	color: #444;
-	font: 12px/24px 'Raleway'; }
+	color: #444; }
 
-main section{width: 30.33333%;
+/* Content */
+main > section{width: 30.33333%;
 	padding: 0 1.5%;
 	float: left; }
 
+h2{font: bold 21px/24px 'Raleway'; }
+
 main p{margin: 24px 0; }
 
-
-input[type="button"], h2{font: bold 21px/24px 'Raleway'; }
-
+/* Footer */
 footer{font: italic 14px/24px arial;
 	text-align: center;
 	padding: 12px 0 12px 0;  }
 
-@media screen and (min-width: 1024px) {
-	main section:nth-of-type(3n+1):last-of-type{width: 97%; }
+/* Media Queries */
+@media screen and (min-width: 1024px) { /* Desktop */
+	main > section:nth-of-type(3n+1):last-of-type{width: 97%; }
 
-	main section:nth-of-type(3n+1):nth-last-child(2){width: 47%; }
-	main section:nth-of-type(3n+2):last-of-type{width: 47%; }
+	main > section:nth-of-type(3n+1):nth-last-child(2){width: 47%; }
+	main > section:nth-of-type(3n+2):last-of-type{width: 47%; }
 
 }
 
-@media screen and (max-width: 1024px) {
-	main{width: 750px; }
-
-	main section{width: 47%; }
-	main section:nth-of-type(odd):last-child{width: 97%; }
-
+@media screen and (max-width: 1024px) { /* Tablet */
 	header section{display: none; }
 
+	main{width: 750px; }
+
+	main > section{width: 47%; }
+	main > section:nth-of-type(odd):last-child{width: 97%; }
+
 }
 
-@media screen and (max-width: 770px) {
-	body{background-color: #fff;}
-
+@media screen and (max-width: 770px) { /* Mobile */
 	main{width: 90%;}
 
-	header nav li:not(.icon){display: none; }
+	header li{display: none; }
 	header li.icon{display: inline; }
 	
-	main section{width: 100%; }
+	main > section{width: 100%;
+		padding: 0; }
 
 }
