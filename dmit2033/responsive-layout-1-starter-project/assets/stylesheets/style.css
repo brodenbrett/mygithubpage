@@ -1,0 +1,364 @@
+@import "http://fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700";
+/* ------------------------------------------------------------Universal */
+* {
+  box-sizing: border-box;
+}
+
+/* ------------------------------------------------------------Utilities */
+.outline-only {
+  display: none;
+}
+
+.viewport-label {
+  margin: 0;
+}
+.viewport-label::before {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 0 5px;
+  color: white;
+  font-size: 0.75em;
+  background: rgba(0, 0, 0, 0.5);
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.baseline-grid {
+  background-image: linear-gradient(#0ff 1px, transparent 1px);
+  background-size: auto 1.5em;
+}
+
+/* ------------------------------------------------------------Typography */
+html {
+  font-family: "Vollkorn", georgia, serif;
+  font-size: 125%;
+  line-height: 1.5em;
+  font-weight: normal;
+}
+
+body {
+  color: #443d43;
+}
+
+h1, h2, h3, h4, h5, h6, ul, ol, li, p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: arial, sans-serif;
+  font-weight: 900;
+  font-size: 2em;
+  line-height: 1.5;
+  margin-bottom: 0.75em;
+}
+
+h2 {
+  font-family: "Vollkorn", georgia, serif;
+  font-weight: normal;
+  font-size: 1.5em;
+  line-height: 1;
+  margin-bottom: 1em;
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* ------------------------------------------------------------Grid */
+.container {
+  padding: 0 1em;
+}
+.container .grid {
+  margin-left: -1em;
+  margin-right: -1em;
+}
+
+.grid-frame {
+  clear: both;
+  margin: 0;
+  margin-bottom: 3em;
+  padding: 0 1em;
+}
+
+.grid-frame:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 80em) {
+  .container {
+    max-width: 64em;
+    margin: 0 auto;
+  }
+}
+/* ------------------------------------------------------------Buttons */
+.button {
+  display: inline-block;
+  padding: 0.75em 1em;
+  margin-top: 0.375em;
+  margin-bottom: 0.375em;
+  font-size: 0.8em;
+  line-height: 1.5;
+  text-decoration: none;
+  border-radius: 20px;
+}
+.button.button-default {
+  color: #fff;
+  background: #443d43;
+}
+.button.button-primary {
+  color: #fff;
+  background: #ee5a47;
+}
+
+/* ------------------------------------------------------------Links */
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #ee5a47;
+}
+
+/* ------------------------------------------------------------Branding */
+.branding-logo {
+  width: 4em;
+  font-family: "Vollkorn", georgia, serif;
+  font-size: 1em;
+  line-height: 3em;
+  text-transform: none;
+  text-indent: -9999px;
+  background: url("../images/ui/sprites.png") left top;
+  background-size: 60em;
+  background-position: 0 0.75em;
+}
+
+/* ------------------------------------------------------------Imagery */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ------------------------------------------------------------Sections */
+body > section {
+  padding: 3em 0;
+}
+
+/* ------------------------------------------------------------Site Nav */
+body.landing-page .site-nav ul li:first-child a {
+  color: #fff;
+  background: #ee5a47;
+  border-radius: 0.5em;
+}
+
+.site-nav {
+  text-align: center;
+}
+.site-nav .grid-frame {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+.site-nav .grid-frame:first-child {
+  margin-bottom: 0;
+}
+.site-nav .grid-frame:last-child {
+  margin-top: 0;
+}
+.site-nav li {
+  display: inline;
+}
+.site-nav a {
+  display: inline-block;
+  padding: 0 0.25em;
+  font-family: arial, sans-serif;
+  font-weight: 900;
+}
+.site-nav li a {
+  font-size: 0.8em;
+  line-height: 1.875;
+  color: #443d43;
+}
+
+/* ------------------------------------------------------------Header Banner */
+.branding-banner {
+  height: 9em;
+  background-image: url("../images/ui/tagline.png"), url("../images/ui/hipster-alley-md.jpg");
+  background-size: auto 75%, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center, center center;
+  box-shadow: inset 0px 10px 0px rgba(255, 255, 255, 0.5);
+}
+
+/* ------------------------------------------------------------Intro Section */
+.intro {
+  text-align: center;
+}
+.intro .button {
+  font-size: 0.7em;
+  margin: 0.375em 0;
+  padding: 1em 0.5em;
+}
+.intro .button:first-child {
+  border-radius: 1em 0 0 1em;
+}
+.intro .button:last-child {
+  border-radius: 0 1em 1em 0;
+}
+
+/* ------------------------------------------------------------Process Section */
+.process {
+  text-align: center;
+  background-color: #eeeeee;
+}
+.process .process-icon {
+  display: block;
+  height: 2.5em;
+  width: 3em;
+  margin: 0 auto 0.5em auto;
+  background-image: url("../images/ui/sprites.png");
+  background-size: 50em;
+  background-position: 0.6em -4em;
+}
+.process .process-organization .process-icon {
+  background-position: -3.85em -4em;
+}
+.process .process-education .process-icon {
+  background-position: -8em -4em;
+}
+.process .process-efficiency .process-icon {
+  background-position: -12.15em -4em;
+}
+.process .process-creativity .process-icon {
+  background-position: -16.3em -4em;
+}
+.process .process-accuracy .process-icon {
+  background-position: -20.45em -4em;
+}
+
+/* ------------------------------------------------------------Portfolio Section */
+.portfolio {
+  text-align: center;
+}
+.portfolio h1 {
+  margin-bottom: 0;
+}
+.portfolio .grid-frame {
+  margin-bottom: 1.5em;
+}
+.portfolio nav {
+  font-style: italic;
+  color: #939393;
+  margin-bottom: 1.5em;
+}
+.portfolio nav li {
+  display: inline;
+}
+.portfolio nav li:after {
+  content: " / ";
+}
+.portfolio nav li:last-child:after {
+  content: "";
+}
+.portfolio nav a {
+  color: #939393;
+  padding: 0 0.25em;
+}
+.portfolio nav a.active {
+  color: #ee5a47;
+}
+
+/*# sourceMappingURL=style.css.map */
+
+
+
+@media (min-width: 24em) {
+  .viewport-label::before {
+    content: "24em Breakpoint";
+  }
+}
+@media (min-width: 32em) {
+  .viewport-label::before {
+    content: "32em Breakpoint";
+  }
+
+  .branding-banner{height: 12em;
+    background-image: url("../images/ui/tagline.png"), url("../images/ui/hipster-alley-sm.jpg"); }
+
+  .intro .button.button-primary, .intro .button.button-default{border-radius: 1em;
+    padding: 1em 1.5em;
+    margin: 0.375em 0.75em;
+    font-size: 0.8em; }
+
+  .process .grid-frame{width: 50%;
+    margin: 0;
+    min-height: 280px;
+    padding: 0 0.75em;
+    float: left;
+    clear: none; }
+
+  .portfolio .grid-frame{max-width: 24em; 
+    margin: 1.5em auto; }
+
+  .process .grid-frame:last-child{margin-bottom: 0;}
+}
+@media (min-width: 46em) {
+  .viewport-label::before {
+    content: "46em Breakpoint";
+  }
+
+  .branding-banner{height: 16em; 
+    background-image: url("../images/ui/tagline.png"), url("../images/ui/hipster-alley-md.jpg"); }
+
+  .site-nav .grid-frame, .site-nav .grid-frame:last-child{width: 30%;
+    float: left;
+    margin-top: 1.5em;
+    margin-bottom: 0;
+    padding: 0 1em;
+    clear: none; 
+    text-align: left; }
+
+  .site-nav .grid-frame:last-child{width: 70%; 
+    padding: 15px 0;
+    text-align: right; }
+
+  .site-nav a{padding: 0 0.75em;}
+}
+@media (min-width: 60em) {
+  .viewport-label::before {
+    content: "60em Breakpoint";
+  }
+
+  .branding-banner{height: 24em;
+  background-size: auto 12em, cover; 
+  background-image: url("../images/ui/tagline.png"), url("../images/ui/hipster-alley-lg.jpg"); }
+
+  .portfolio .grid{width: 45em;
+    margin: auto;}
+
+  .process .grid-frame, .portfolio .grid-frame{width: 33.3333%;
+    padding: 0 0.75em;
+    min-height: 0;
+    float: left;
+    clear: none;
+    text-align: center;  }
+
+  .portfolio .grid-frame{width: 50%;
+    margin-top: 0; }
+
+@media (min-width: 70em) {
+  .viewport-label::before {
+    content: "70em Breakpoint";
+  }
+}
+@media (min-width: 80em) {
+  .viewport-label::before {
+    content: "80em Breakpoint";
+  }
+}
