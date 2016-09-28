@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Mock Quiz</title>
+	<meta charset="utf-8" >
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="Broden Brett">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="stylesheets/reset.css">
+	<link rel="stylesheet" href="stylesheets/main.css">
+	<link rel="stylesheet" href="stylesheets/forms.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet">
+</head>
+
+<body>
+	<header class="clearfix">
+		<h1><a href="index.html">CPSC1012 Supplemental Learning</a></h1>
+	</header>
+
+	<main class="clearfix">
+		<form action="forms.html" method="post" id="myform">
+			<fieldset>
+				<legend>Practice Quiz</legend>
+				<p>Click the grey boxes and fill in your answers.  When you are done, click "Show Answers" to see how well you did.  Good luck on Friday!</p>
+
+				<section class="clearfix">
+					<label>1: </label>
+					<p>In <span class="code">Console.WriteLine(message);</span>, what is the <b>class</b>, <b>method</b>, and <b>parameter</b>?</p>
+					<input class="col-3" type="text" name="user" id="user" placeholder="Class">
+					<input class="col-3" type="text" name="user" id="user" placeholder="Method">
+					<input class="col-3" type="text" name="user" id="user" placeholder="Parameter">
+					<p class="answer hidden">Console, WriteLine, message</p>
+				</section>
+
+				<section class="clearfix">
+					<label>2: </label>
+					<p>Are the following keywords a class, method, or datatype?</p>
+					<input class="col-3 vocab" type="text" name="user" id="user" placeholder="Convert">
+					<input class="col-3 vocab" type="text" name="user" id="user" placeholder="double">
+					<input class="col-3 vocab" type="text" name="user" id="user" placeholder="Math">
+					<input class="col-3 vocab" type="text" name="user" id="user" placeholder="Pow">
+					<input class="col-3 vocab" type="text" name="user" id="user" placeholder="ReadKey">
+					<input class="col-3 vocab" type="text" name="user" id="user" placeholder="bool">
+					<p class="answer hidden">class, datatype, class, method, method, datatype</p>
+				</section>
+
+				<section class="clearfix">
+					<label>3: </label>
+					<p>There are four errors within this snippet of code.  Correct them:</p>
+					<textarea name="comments" id="comments" class="code">
+﻿﻿Console.WriteLine(Enter width of window in meters:);
+double width = Console.ReadLine();
+
+Console.WriteLine("Enter height of window in meters:");
+double height = Console.ReadLine();
+
+double woodLength = (width + height) * 2 * 3.25;
+double windowArea = width * height * 2;
+
+Console.WriteLine("The area of glass needed is: " + windowArea.ToString() + " square meters.");
+Console.WriteLine("The length of the wood needed is: " woodLength.ToString() " feet.");
+Console.ReadLine();
+					</textarea>
+					<ol class="answer hidden">
+						<li><span class="code">﻿﻿Console.WriteLine(<b>"Enter width of window in meters:"</b>);</span></li>
+						<li><span class="code">double height = <b>double.Parse(Console.ReadLine())</b>;</span></li>
+						<li><span class="code">double width = <b>double.Parse(Console.ReadLine())</b>;</span></li>
+						<li><span class="code">Console.WriteLine("The length of the wood needed is: " <b>+</b> woodLength.ToString() <b>+</b> " feet.")</b>;</span></li>
+					</ol>
+				</section>
+
+				<section class="clearfix">
+					<label>4: </label>
+					<p>Write a single complete line of code that will write "Hello World" in the console.</p>
+					<input type="text" name="user" id="user">
+					<p class="answer hidden"><span class="code">Console.WriteLine("Hello World");</span></p>
+				</section>
+
+				<section class="clearfix">
+					<label>5: </label>
+					<p>Using the Math class, write a single complete line of c# to set the variable <span class="code">number</span> to itself cubed.</p>
+					<input type="text" name="user" id="user">
+					<p class="answer hidden"><span class="code">Math.Pow(number, 3);</span></p>
+				</section>
+
+				<section class="clearfix">
+					<label>6: </label>
+					<p>Enter the correct syntax: </p>
+					<input class="col-3 vocab" type="text" name="user" id="user" placeholder="Starting Block Comment">
+					<input class="col-3 vocab" type="text" name="user" id="user" placeholder="Starting Comment">
+					<input class="col-3 vocab" type="text" name="user" id="user" placeholder="New Line in String">
+					<input class="col-3 vocab" type="text" name="user" id="user" placeholder="Indent Code Inside String">
+					<input class="col-3 vocab" type="text" name="user" id="user" placeholder="Modulus">
+					<input class="col-3 vocab" type="text" name="user" id="user" placeholder="Assignment Operator">
+					<ol class="answer hidden">
+						<li><span class="code">/*</span></li>
+						<li><span class="code">//</span></li>
+						<li><span class="code">\n</span></li>
+						<li><span class="code">\t</span></li>
+						<li><span class="code">%</span></li>
+						<li><span class="code">=</span></li>
+					</ol>
+				</section>
+
+				<section class="clearfix">
+					<label>6: </label>
+					<p>What datatypes are the folowing? </p>
+					<input class="col-3 vocab" type="text" name="user" id="user" placeholder="&quot;message&quot;"">
+					<input class="col-3 vocab" type="text" name="user" id="user" placeholder="'2'">
+					<input class="col-3 vocab" type="text" name="user" id="user" placeholder="2">
+					<input class="col-3 vocab" type="text" name="user" id="user" placeholder="2.0">
+					<input class="col-3 vocab" type="text" name="user" id="user" placeholder="true">
+					<input class="col-3 vocab" type="text" name="user" id="user" placeholder="&quot;2&quot;">
+					<p class="answer hidden">string, char, int, double, bool, string</p>
+				</section>
+
+				<section class="clearfix bonus">
+					<label>Bonus: </label><br>
+					<p>Code a new console application.  The program should ask the user for a rating on how they are feeling up to 100, then output a message based on the range of the number.  Draw a flowchart before you start your code!<br><br>eg. If the user inputs:</p>
+					<ul>
+						<li>&lt; 0: <span class="code">You are feeling hungry.</span></li>
+						<li>0: <span class="code">You are feeling empty.</span></li>
+						<li>20 - 44: <span class="code">You are feeling broken.</span></li>
+						<li>45 - 74: <span class="code">You are feeling ragged.</span></li>
+						<li>75 - 89: <span class="code">You are feeling weary.</span></li>
+						<li>90 - 99: <span class="code">You are feeling worn.</span></li>
+						<li>100: <span class="code">You are feeling healthy.</span></li>
+					</ul>
+				</section>
+
+				<section >
+					<a class="clearfix" href="javascript:void(0);" onclick="toggleAnswers()"><input type="button" value="Show Answers" id="answers" name="answers"></a>
+				</section>
+			</fieldset>
+		</form>
+
+	 </main>
+
+	<footer>
+		<p>&copy; 2016 | BrodenB@nait.ca | Broden Brett</p>
+	</footer>
+	<script src="javascript/main.js"></script>
+</body>
+</html>

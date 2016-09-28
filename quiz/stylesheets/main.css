@@ -1,0 +1,102 @@
+/* 12 14 16 21 24 36 48 60 72 */
+
+body{font: 16px/24px arial;
+	transition: 0.5s; }
+
+header, footer{background-color: #222;
+	color: #aaa;
+	padding: 24px 0;
+	font: 21px/24px 'Raleway'; }
+
+main {width: 960px;
+	margin: 0 auto;
+	padding: 24px 0;
+	color: #222; }
+
+/* Navigation */
+h1{font: bold 48px/48px 'Raleway'; 
+	text-transform: uppercase;
+	text-align: center; }
+
+header a{transition: 0.3s; }
+header a:hover{color: #fff; }
+
+/* Content */
+main > section{width: 30.33333%;
+	padding: 0 1.5%;
+	float: left; }
+
+h2{font: bold 21px/24px 'Raleway'; }
+
+main p{margin: 24px 0; }
+
+.hidden{display: none; }
+
+.answer{font: italic 12px/24px 'arial';
+	color: #666;
+	padding-left: 20px; }
+
+.answer::before{content: 'Answer: ';
+	margin-left: -12px}
+
+
+.code{background-color: #ddd;
+	font: bold 16px/24px monospace;
+	padding: 0 6px;}
+
+.answer .code{font: italic 12px/24px monospace;
+	color: #666; }
+
+.bonus{border: 1px black solid;
+	padding: 1.5%;}
+
+.col-3{width: 32.33333%;
+	margin-bottom: 24px}
+
+.col-3:nth-of-type(3n+2){margin: 0 1.5% 24px 1.5%;}
+
+.code b{color: #f00;}
+
+.vocab{text-align: center; }
+.vocab::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #666;
+}
+.vocab::-moz-placeholder { /* Firefox 19+ */
+  color: #666;
+}
+.vocab:-ms-input-placeholder { /* IE 10+ */
+  color: #666;
+}
+.vocab:-moz-placeholder { /* Firefox 18- */
+  color: #666;
+}
+
+/* Footer */
+footer{font: italic 14px/24px arial;
+	text-align: center;
+	padding: 12px 0 12px 0;  }
+
+/* Media Queries */
+@media screen and (min-width: 1024px) { /* Desktop */
+	main > section:nth-of-type(3n+1):last-of-type{width: 97%; }
+
+	main > section:nth-of-type(3n+1):nth-last-child(2){width: 47%; }
+	main > section:nth-of-type(3n+2):last-of-type{width: 47%; }
+
+}
+
+@media screen and (max-width: 1024px) { /* Tablet */
+	main{width: 750px; }
+
+	main > section{width: 47%; }
+	main > section:nth-of-type(odd):last-child{width: 97%; }
+
+}
+
+@media screen and (max-width: 770px) { /* Mobile */
+	main{width: 90%;}
+	
+	main > section{width: 100%;
+		padding: 0; }
+
+}

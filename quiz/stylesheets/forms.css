@@ -1,0 +1,71 @@
+fieldset section{border-bottom: 1px #aaa solid;
+	padding-bottom: 23px;}
+
+legend{font: bold 24px/24px 'Raleway';
+	margin-top: 24px; 
+	text-align: center; }
+
+legend + p{margin:0 ;
+	padding: 0 0 24px 0;
+	text-align: center;
+	font-style: italic;
+	color: #666;
+	border-bottom: 1px #aaa solid; }
+
+label, input, textarea{float: left;
+	box-sizing: border-box;
+	height: 24px;
+	margin: 0 0 24px 0;
+	border: 0;
+	outline: none;
+	font: bold 16px/24px 'Raleway';
+	width: 100%; }
+
+label{text-transform: uppercase;
+	display: inline-block;
+	width: auto;
+	margin-right: 3%; }
+
+input, textarea{padding: 1px 3px;
+	font: bold 14px 'Raleway';
+	background: #ccc; }
+
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus{outline: 2px solid #222; }
+
+input[type="radio"]{width: 16px;
+	height: 16px;
+	margin: 4px 60px 28px 0; }
+
+input[type="radio"]::after{content: attr(value);
+	margin: -4px 0 0 100%;
+	display: inline-block;
+	font: 16px/24px 'arial'; }
+
+label[for="comments"]{width: 100%; }
+
+textarea{height: 336px;
+	white-space: nowrap; 
+	overflow: scroll; }
+
+textarea.code{background-color: #ddd;
+	display: inline-block;
+	font: 14px/24px monospace;
+	padding: 0 6px;}
+
+input[type="button"]{width: 100px;
+	height: 36px;
+	margin: 24px 0 6px 0;
+	text-transform: uppercase; }
+
+input[type="button"]:hover{background: #222;
+	color: #fff;
+	cursor: pointer; }
+
+input[type="button"]{width: 100%;}
+
+
+@media screen and (max-width: 770px) { /* Mobile */
+	label{margin-bottom: 0; }
+	label, input, textarea{width: 100%}
+	
+}
