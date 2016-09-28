@@ -44,7 +44,6 @@ input[type="radio"]::after{content: attr(value);
 label[for="comments"]{width: 100%; }
 
 textarea{height: 336px;
-	white-space: nowrap; 
 	overflow: scroll; }
 
 textarea.code{background-color: #ddd;
