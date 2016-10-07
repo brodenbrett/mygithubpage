@@ -1,0 +1,261 @@
+/* Utilities */
+body{background-color: #fff;
+	text-align: center; }
+
+header, footer, main, .offcanvas-menu{width: 100%;
+	margin: 0 auto; }
+
+.container{max-width: 1180px; 
+	margin: auto;
+	width: 98%; }
+
+a:not(.icon):hover{text-decoration: underline;}
+
+/* Header */
+header{display: flex;
+	flex-flow: column;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	background: url('../images/header-bg.jpg') no-repeat bottom center;
+	background-size: cover;
+	font: 14px/30px 'Lato'; }
+
+header h1::before{content: 'Find your Favorite';
+	text-transform: none;
+	display: block;
+	font: italic bold 20px/30px 'Times New Roman';
+	opacity: 0.7; }
+
+header h1{order: 2;
+	font: bold 60px/60px 'Lato'; }
+
+header nav~*{order: 3; }
+
+header nav.container{margin: 20px auto;
+	font: bold 14px/60px 'Lato'; }
+
+header > nav img{float: left;}
+
+header > nav ul{float: left;
+	width: calc(100% - 68px);
+	text-align: right; }
+
+header > nav li{display: inline-block;
+	margin-left: 20px;}
+
+header button{width: 280px;
+	margin: 31px auto;
+	padding: 16px 0; 
+	border: 3px #fff solid;
+	font: bold 18px/30px 'Lato';
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	background: none;
+	color: #fff;
+	border-radius: 5px;
+	transition: 0.3s;
+	cursor: pointer; }
+
+header button:hover{background: rgba(255, 255, 255, 0.3); }
+
+header p{font-size: 12px;
+	width: 80%;
+	margin: 0 auto 30px auto;}
+
+header p a{text-decoration: underline; }
+
+/* Menu */
+.offcanvas-menu{height: 0;
+    background-color: #2f2b2f;
+    position: fixed;
+    top: 0; left: 0;
+    overflow-y: hidden;
+    transition: 0.5s;
+    z-index: 1; }
+
+.offcanvas-menu.active{height: 100%; }
+
+.offcanvas-menu .icon{margin-top: -100px;
+	font: 20px/20px arial;
+	float: right; }
+
+.offcanvas-menu img{margin: auto;
+	position: absolute;
+	top: 40px;
+	left: 0; right: 0; }
+
+.offcanvas-menu ul{border-top: 1px #fff solid;
+	max-width: 600px;
+	margin: 140px auto 0 auto; }
+
+.offcanvas-menu li{display: block; }
+
+/* Content */
+main, footer{font: 300 16px/24px 'Lato'; }
+
+h2, main h2::after{font: bold 18px/30px 'Lato';
+	text-transform: uppercase;
+	margin: auto; }
+
+main h2::after{display: block;
+	width: 88px;
+	content: "";
+	border-bottom: 1px #f57365 solid; }
+
+/* Features */
+.features{padding: 30px 0 20px 0; }
+
+.features section{width: 80%;
+	margin: auto;
+	padding: 120px 0 0 0;
+	background: url('../images/inspired.png') no-repeat center top; }
+
+.features section:nth-of-type(2){background-image: url('../images/rewarded.png'); }
+.features section:nth-of-type(3){background-image: url('../images/social.png'); }
+
+.features p{min-height: 120px; 
+	margin-top: 9px; }
+
+/* Reviews */
+.reviews{padding: 30px 0 60px 0;
+	background: url('../images/reviews-bg.jpg') no-repeat bottom center;
+	background-size: cover;
+	color: rgba(255,255,255,0.6); }
+
+.reviews img{display: block;
+	margin: auto;
+	padding: 3px 0; }
+
+.reviews blockquote{font: 100 20px/30px 'Lato';
+	max-width: 950px;
+	width: 90%;
+	margin: 20px auto 0 auto; }
+
+.reviews blockquote::after{content: attr(cite);
+	display: block;
+	margin-top: 10px;
+	font: 100 18px/30px 'Lato' }
+
+/* Cuisine */
+.cuisine h2{padding: 50px 0 39px 0; }
+
+main li{display: block;
+	width: 100%;
+	float: left; }
+
+.cuisine li{color: #fff;
+	background: no-repeat center center;
+	background-size: cover;
+	cursor: pointer; }
+
+.cuisine li:nth-child(1){background-image: url('../images/italian.jpg'); }
+.cuisine li:nth-child(2){background-image: url('../images/indian.jpg'); }
+.cuisine li:nth-child(3){background-image: url('../images/french.jpg'); }
+.cuisine li:nth-child(4){background-image: url('../images/steakhouse.jpg'); }
+.cuisine li:nth-child(5){background-image: url('../images/seafood.jpg'); }
+.cuisine li:nth-child(6){background-image: url('../images/sushi.jpg'); }
+.cuisine li:nth-child(7){background-image: url('../images/mexican.jpg'); }
+.cuisine li:nth-child(8){background-image: url('../images/chinese.jpg'); }
+.cuisine li:nth-child(9){background-image: url('../images/pizza.jpg'); }
+.cuisine li:nth-child(10){background-image: url('../images/american.jpg'); }
+
+span{display: block; }
+
+.cuisine li span{transition: background 0.3s; }
+
+.cuisine li:hover span{background-color: rgba(0, 0, 0, 0.5); }
+
+.cuisine span.category{text-transform: uppercase;
+	font: bold 36px/45px 'Lato';
+	letter-spacing: 2px;
+	padding-bottom: 90px; }
+
+.cuisine span.recipes{text-transform: none;
+	font: italic bold 15px/15px 'Times New Roman';
+	opacity: 0.9;
+	padding-top: 75px; }
+
+/* Numbers */
+.numbers ul{padding: 30px 0; }
+
+.numbers li{margin-bottom: 15px;
+	font: 300 16px/30px 'Lato'; }
+
+.numbers span{font: bold 36px/45px 'Lato'; }
+
+/* Footer */
+footer{background: #f7f7f7;
+	border-top: 1px #e2e2e2 solid;
+	padding: 30px 0 29px 0; }
+
+footer span{color: #8b8b8b;
+	width: 100%;
+	font: 300 14px/30px 'Lato'; }
+
+footer span:last-child{text-transform: uppercase;
+	letter-spacing: 3px; }
+
+footer a{color: black;
+	font-weight: 400; }
+
+/* Media Queries */
+@media screen and (min-width: 425px) { /* L Mobile */
+	header{min-height: 600px; }
+	header h1::before{font: italic bold 36px 'Times New Roman'; }
+	header h1{margin: 60px auto 0 auto;
+	font: bold 100px/120px 'Lato'; }
+	header p{width: 100%;
+		font: inherit; }
+
+	.offcanvas-menu{position: absolute; }
+	.offcanvas-menu.active{height: 310px; }
+	.offcanvas-menu li{display: inline-block;
+		font-size: 12px;
+		margin: 0 2%; }
+
+	.reviews blockquote{font: 100 30px/46px 'Lato';}
+	.reviews blockquote::after{font-size: 18px; }
+
+	.cuisine h2{padding-top: 65px; }
+	.cuisine li{width: 50%; }
+	.cuisine span.category{font: bold 29px/45px 'Lato'; }
+}
+
+@media screen and (min-width: 768px) { /* Tablet */
+	header{min-height: 880px;}
+	header h1{margin: 274px auto 0 auto; }
+
+	.offcanvas-menu li{margin: 0 22px;
+		font-size: inherit; }
+
+	.features{padding: 60px 0 30px 0; }
+	.features section{width: 30.508%;
+		float: left; }
+	.features section:nth-child(2){margin-left: 3.39%;
+		margin-right: 3.39%; }
+
+	.reviews{padding: 80px 0 120px 0; }
+
+	.cuisine li{width: 30%; }
+	.cuisine li:nth-child(4n), .cuisine li:nth-child(9n+3){width: 40%; }
+	.cuisine li:nth-child(n+7){width: 25%;}
+
+	.numbers ul{padding: 60px 0; }
+	.numbers li:nth-child(n){width: 20%; }
+
+	footer{padding: 0; }
+	footer span{float: left;
+	width: 50%;
+	font: 300 14px/89px 'Lato';
+	text-align: left; }
+	footer span:last-child{text-align: right; }
+}
+
+@media screen and (min-width: 1024px) { /* Desktop */
+	.features{padding: 100px 0 60px 0; }
+}
+
+@media screen and (min-width: 1300px) { /* L Desktop */
+	.cuisine li:nth-child(n){width: 20%; }
+}
